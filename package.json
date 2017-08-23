@@ -2,6 +2,10 @@
   "name": "conversational-machine",
   "version": "0.0.3",
   "description": "A state machine for conversational interfaces",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/muxe/conversational-machine"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

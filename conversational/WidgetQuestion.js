@@ -1,4 +1,4 @@
-let Question = require('Question');
+let Question = require('./Question');
 class WidgetQuestion extends Question {
 	constructor(questionText, widget, settings ) {
 		super(questionText, settings)

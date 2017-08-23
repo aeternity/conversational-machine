@@ -1,14 +1,14 @@
 let Question = require('./Question');
 class WidgetQuestion extends Question {
-	constructor(questionText, widget, settings ) {
+	constructor(questionText, widgets, settings ) {
 		super(questionText, settings)
-		this.widget = widget;
+		this.widgets = widgets;
 	}
-	get widget() {
+	get widgets() {
 		return this._widget;
 	}
-	set widget(widget) {
-		this._widget = widget;
+	set widgets(widgets) {
+		this._widget = widgets;
 	}
 }
 module.exports = WidgetQuestion;

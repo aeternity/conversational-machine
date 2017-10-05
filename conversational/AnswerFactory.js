@@ -1,6 +1,7 @@
 let Answer = require('./Answer');
-// let AnswerYes = require('./AnswerYes');
 let AnswerFreetext = require('./AnswerFreetext');
+let AnswerSettings = require('./AnswerSettings');
+let AnswerHidden = require('./AnswerHidden');
 
 class AnswerFactory {
 	constructor() {
@@ -14,9 +15,13 @@ class AnswerFactory {
 		return new AnswerFreetext(name, transition, regex, callback);
 	}
 
-	// static yes(callback) {
-	// 	return new AnswerYes(callback);
-	// }
+	static settings(name, transition, regex, settings, callback) {
+		return new AnswerSettings(name, transition, regex, settings, callback);
+	}
+
+	static hidden(transition, settings, callback) {
+		return new AnswerHidden(transition, settings, callback);
+	}
 }
 
 module.exports = AnswerFactory;

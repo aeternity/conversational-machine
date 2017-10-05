@@ -52,6 +52,16 @@ class ConversationalFSM {
 				toState: newState
 			});
 
+			this.emit('onLeave_' + newState, {
+				fromState: fromState,
+				toState: newState
+			});
+
+			this.emit('onEnter_' + newState, {
+				fromState: fromState,
+				toState: newState
+			});
+
 			if (this.states[newState].onEnter) {
 				this.states[newState].onEnter();
 			}

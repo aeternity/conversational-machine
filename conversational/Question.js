@@ -14,6 +14,7 @@ class Question {
 		this.answers = settings.answers;
 		this.onEnter = isFunction(settings.onEnter) ? settings.onEnter : null;
 		this.onLeave = isFunction(settings.onLeave) ? settings.onLeave : null;
+		this.settings = settings;
 	}
 
 	get answers() {
@@ -39,15 +40,18 @@ class Question {
 		return '';
 	}
 
+	getPossibleAnswerNames() {
+		let filtered = this.getPossibleAnswers();
+		return map(filtered, answer => {
+			return answer.name;
+		});
+	}
+
 	getPossibleAnswers() {
 		let filtered = filter(this.answers, answer => {
 			return answer.displayHint !== false;
 		});
-		let names = map(filtered, answer => {
-			return answer.name;
-		});
-
-		return names;
+		return filtered;
 	}
 
 	setAnswer(fsm, answerText) {

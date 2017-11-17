@@ -4,7 +4,7 @@
   "description": "A state machine for conversational interfaces",
   "repository": {
     "type": "git",
-    "url": "https://github.com/muxe/conversational-machine"
+    "url": "git+https://github.com/aeternity/conversational-machine"
   },
   "main": "dist/conversational-machine.js",
   "scripts": {
@@ -26,5 +26,9 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.4"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/aeternity/conversational-machine/issues"
+  },
+  "homepage": "https://github.com/aeternity/conversational-machine#readme"
 }

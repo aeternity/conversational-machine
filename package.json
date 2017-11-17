@@ -1,18 +1,30 @@
 {
-  "name": "conversational-machine",
+  "name": "@aeternity/conversational-machine",
   "version": "0.0.5",
   "description": "A state machine for conversational interfaces",
   "repository": {
     "type": "git",
     "url": "https://github.com/muxe/conversational-machine"
   },
-  "main": "index.js",
+  "main": "dist/conversational-machine.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build/build.js",
+    "prepublish": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.8.1"
   },
   "author": "Max Dörfler <max@apeunit.com> (https://github.com/muxe)",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "lodash": "^4.17.4"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@aeternity/conversational-machine",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A state machine for conversational interfaces",
   "repository": {
     "type": "git",
